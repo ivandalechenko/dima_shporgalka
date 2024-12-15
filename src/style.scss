@@ -11,5 +11,49 @@
   // это просто стили уже дальше 
   background: #000;
   min-height: 100vh;
+}
 
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.element {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid white;
+
+  @media(max-width: 600px) {
+    border: 2px solid red;
+  }
+
+  // называется амперсант
+  // shift + 7
+  &s_list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_header {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
+    &_shotoTam {
+      font-size: 15px;
+    }
+  }
+
+
+  &_content {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
 }
